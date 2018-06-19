@@ -1,24 +1,12 @@
 #!/usr/bin/perl
-#
-# extract-contig.pl
-# =====================================================
-# Extracts contig sequences from a fasta file. Either 
-# a single sequence name is given, or a text file with 
-# a list of names (type must be given as input, either
-# "single" or "list" .
-# =====================================================
-# Usage: extractFromFasta.pl <sequence.fa> 
-#				<single|list> <contig name|list>
-#
-# Example: extractFromFasta.pl mySeq.fa single contig4 > contig4.fa
  
 use strict;
 use warnings;
  
 # Input parameters
-my $scaffold_file = $ARGV[0];
-my $type = $ARGV[1];
-my $query = $ARGV[2];
+my $scaffold_file = $ARGV[2];
+my $type = $ARGV[0];
+my $query = $ARGV[1];
  
 # Save wanted fasta headers
 my %list=();
@@ -71,14 +59,13 @@ while(<IN>) {
 sub usage {
 	print << "A";
 \nextract-contig.pl
-=====================================================
-Extracts contigs from a fasta file. Either a
-single sequence name is given, or a text file with 
-a list of names (type must be given as input, either
- "single" or "list" without double quote
-=====================================================
-Usage: extractFromFasta.pl <seqfile.fa> <single|list> <contig name|list.txt>
-\nExample: extractFromFasta.pl mySeq.fa single contig1 > contig1.fa\n
+===============================================================================================
+Extracts contigs from a fasta file. Either a single sequence name is given, or a text file with 
+a list of names (type must be given as input, either single contig or a list of desired contigs
+================================================================================================
+Usage: extract-contig.pl single|list contig_name|list SEQ.fasta > NEW-FILE.fasta
+\nExample to extract a contig named contig1 from file SEQ.fasta: extract-contig.pl single contig1 SEQ.fasta > contig1.fasta
+\n
 A
  
 exit;

@@ -39,6 +39,18 @@ It generates data on standard output as follows:
 Sample_ID  Genome  Contigs Mean    Median  N50     Largest GC(%)   N_count N(%)    Gap_count
 test.fasta 158     2       79      89      89      89      5.95    26      16.46   4
 ```
+#### Output explanations
+Genome: Genome size
+Contigs: Number of contigs in the fasta file
+Mean: Average size of contigs in bases
+Median: Size of median contig
+N50: Yardstick of assembly quality - 50% of the contigs are larger than this size (in nucleotide bases) 
+Largest: Size (nucleotide bases) of largest contigs
+GC(%): GC (guanine and cytosine) content of the genome
+N_count: Number of N found in the genome (uncertain base calling)
+N(%): N count in percentage
+Gap_count: count "-" in the fasta file, usually appears in alignment file
+
 ### reverse-complement.sh
 This Bash script generates reverse complement for nucleotide FASTA files. That is, A -> T, G -> C and vice versa.
 ```

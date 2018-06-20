@@ -49,7 +49,7 @@ test.fasta 158     2       79      89      89      89      5.95    26      16.46
 * GC(%): GC (guanine and cytosine) content of the genome
 * N_count: Number of N found in the genome (uncertain base calling)
 * N(%): N count in percentage
-* ap_count: count "-" in the fasta file, usually appears in alignment file
+* Gap_count: count "-" in the fasta file, usually appears in alignment file
 
 ## reverse-complement.sh
 This Bash script generates reverse complement for nucleotide FASTA files. That is, A -> T, G -> C and vice versa.

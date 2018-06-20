@@ -32,3 +32,9 @@ It generates data on standard output as follows:
 Sampl      Genome  Contigs Mean    Median  N50     Largest GC(%)   N_count N(%)    Gap_count
 test.fasta 158     2       79      89      89      89      5.95    26      16.46   4
 ```
+### reverse-complement.sh
+This Bash script generates reverse complement for nucleotide FASTA files.
+```
+$ reverse-complement.sh -o OUTPUT_FILENAME FASTAFILE
+```
+Option -o can be omitted, the default output filename is FASTAFILE-complement.fasta

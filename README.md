@@ -57,3 +57,14 @@ This Bash script generates reverse complement for nucleotide FASTA files. That i
 $ reverse-complement.sh -o OUTPUT_FILENAME FASTAFILE
 ```
 Option -o can be omitted, the default output filename is FASTAFILE-complement.fasta
+
+## basename_dir.sh
+This one-line bash script is able to extract the basenames of files with same suffixes for various purposes.
+If a directory has 3 files with suffixes .fasta namely ABC.fasta, CDE.fasta and EFG.fasta, usage is below:
+```
+$ basename_dir.sh fasta
+```
+It will print on standard output:
+```
+$ ABC CDE EFG
+```

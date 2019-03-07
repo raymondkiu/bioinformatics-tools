@@ -5,7 +5,7 @@ if (scalar(@ARGV) == 1) {
     $infile = shift(@ARGV);
 }
 else {
-    die "\nProgram usage: \n\n\$ assembly_stats.pl FASTA.fasta\n\nAuthor: Raymond Kiu Raymond.Kiu@quadram.ac.uk\n20 June 2018\n\n";
+    die "\nProgram usage: \n\n\$ assembly_stats.pl FASTA.fasta\n\nAuthor: Raymond Kiu Raymond.Kiu\@quadram.ac.uk\n20 June 2018\n\n";
 }
 
 $count = 0;

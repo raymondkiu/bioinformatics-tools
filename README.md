@@ -74,6 +74,19 @@ This Bash script is superquick at extracting sequences (or, contigs if you like)
 ```
 $ extract-sequences-ids.sh ids multifasta
 ```
+You can do the below for usage options:
+```
+$ extract-sequences-ids.sh -h
+
+This bash script can extract sequences from multifasta files using sequence ids
+
+Usage: ./extract-sequences-0.2.sh [options] ids.file multifasta.file
+Options:
+ -h print usage and exit
+ -a print author and exit
+ -v print version and exit
+ 
+```
 You will see something like this on the standard output:
 ```
 >ABC123

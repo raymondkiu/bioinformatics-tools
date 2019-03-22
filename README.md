@@ -68,3 +68,24 @@ It will print on standard output:
 ```
 $ ABC CDE EFG
 ```
+
+## extract-sequences-ids.sh
+This Bash script is superquick at extracting sequences (or, contigs if you like) from multifasta files using an external file of ids list and display on the standard output.
+```
+$ extract-sequences-ids.sh ids multifasta
+```
+You will see something like this on the standard output:
+```
+>ABC123
+ATGATAAGATTTAAGAAAACAAAATTAATAGCAAGTATTGCAATGGCTTTATGTCTGTTT
+TCTCAACCAGTAATCAGTTTCTCAAAGGATATAACAGATAAAAATCAAAGTATTGATTCT
+GGAATATCAAGCTTAAGTTACAATAGAAATGAAGTTTTAGCTAGTAATGGAGATAAAATT
+GAAAGTTTTGTTCCAAAGGAAGGTAAAAAGACTGGTAATAAATTTATAGTTGTAGAACGT
+CAAAAAAGATCCCTTACAACATCACCAGTAGATATATCAATAATTGATTCTGTAAATGAC
+```
+To generate the ids file, use vim editor and create any file name e.g. ids and enter the sequence ids line by line
+```
+ABC123
+DMF123
+dlfppt
+```

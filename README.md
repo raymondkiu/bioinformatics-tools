@@ -80,7 +80,7 @@ $ extract-sequences-ids.sh -h
 
 This bash script can extract sequences from multifasta files using sequence ids
 
-Usage: ./extract-sequences-0.2.sh [options] ids.file multifasta.file
+Usage: extract-sequences-ids.sh [options] ids.file multifasta.file
 Options:
  -h print usage and exit
  -a print author and exit

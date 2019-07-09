@@ -102,3 +102,7 @@ ABC123
 DMF123
 dlfppt
 ```
+## contigs-ids-length.sh
+This script estimates the length of each contig in a multi-fasta file.
+##	filter-contig.pl
+This script filters genome assembly by specifying minimum contig length.

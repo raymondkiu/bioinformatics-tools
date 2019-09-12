@@ -70,7 +70,7 @@ do
   r1Param="";
   r2Param="";
 
-  for r1Path in `cat ${r1PathList} | grep "${lib}" | grep "_1.non-rRNA.fastq"`
+  for r1Path in `cat ${r1PathList} | grep "${lib}" | grep "_1.fastq"`
   do
         r1Param=$r1Param$paramSep$r1Path
   done
@@ -78,7 +78,7 @@ do
   r1Param=${r1Param#","}
   r1Param=${r1Param%","}
 
-  for r2Path in `cat ${r2PathList} | grep "${lib}" | grep "_2.non-rRNA.fastq"`
+  for r2Path in `cat ${r2PathList} | grep "${lib}" | grep "_2.fastq"`
   do
         r2Param=$r2Param$paramSep$r2Path
   done

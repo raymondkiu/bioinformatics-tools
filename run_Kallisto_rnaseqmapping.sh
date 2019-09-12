@@ -2,11 +2,13 @@
 
 usage () {
   echo ""
-  echo "This script runs Kallisto for multiple FASTQ files (RNAseq)"
+  echo "This script runs Kallisto for multiple FASTQ files (RNAseq) and submit jobs on slurm"
+  echo "It worked with Kallisto v0.44.0 (dependency)"
   echo ""
   echo "Usage: $0 [options] lib.txt r1.txt r2.txt outputPath refPath"
   echo ""
   echo ""
+  echo "Positional arguments:"
   echo "lib.txt         txt file with a list of filenames for new directory e.g ABC12 (same working directory)"
   echo "r1.txt          a list of forward fastq reads, e.g. ABC12_1.fastq (same working directory)"
   echo "r2.txt          a list of reverse fastq reads, e.g. ABC12_2.fastq (same working directory)"

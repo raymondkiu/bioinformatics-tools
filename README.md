@@ -104,5 +104,8 @@ dlfppt
 ```
 ## 7. contigs-ids-length.sh
 This script estimates the length of each contig in a multi-fasta file.
+
 ##	8. filter-contig.pl
 This script filters genome assembly by specifying minimum contig length.
+##	9. atgc2ATGC.sh
+This bash script converts atgc to ATGC using AWK - super fast, >300MB fasta file in under 15 seconds.

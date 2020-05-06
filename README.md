@@ -107,6 +107,10 @@ This script estimates the length of each contig in a multi-fasta file.
 
 ##	8. filter-contig.pl
 This script filters genome assembly by specifying minimum contig length.
+For example, too filter out contigs with <500 bp,
+```
+$ filter-contig.pl 500 fasta
+```
 
 ##	9. atgc2ATGC.sh
 This bash script converts atgc to ATGC using AWK - super fast, >300MB fasta file in under 15 seconds.
@@ -119,10 +123,14 @@ $ rename_contigs.sh fasta PREFIX
 For example (123.fasta is your fasta file, ABC is the prefix you want to use for renaming your contigs)
 ```
 $ rename_contigs.sh 123.fasta ABC
-$ >ABC.1
-$ ATGCATGC
-$ >ABC.2
-$ AGGTCTCT
-$ >ABC.3
-$ AGGGCCGT
+>ABC.1
+ATGCATGC
+>ABC.2
+AGGTCTCT
+>ABC.3
+AGGGCCGT
+```
+So use > to save into new fasta file, e.g.
+```
+$ rename_contigs.sh 123.fasta ABC > ABC.fna
 ```

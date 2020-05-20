@@ -5,8 +5,8 @@
 #print the options
 usage () {
   echo ""
-  echo "This bash script assigns toxinotypes to C. perfringens genome assemblies using ABRicate v0.8.11 (type will be shown on stdout)"
-  echo "Dependency: ABRicate v0.8.11 with toxinCP database"
+  echo "This bash script assigns toxinotypes to C. perfringens genome assemblies using ABRicate v1.0.1 (type will be shown on stdout)"
+  echo "Dependency: ABRicate v1.0.1 with toxinCP database"
   echo ""
   echo "Usage: $0 [options] FASTAFILE"
   echo "Option:"
@@ -14,11 +14,11 @@ usage () {
   echo " -a print author and exit"
   echo " -v print version and exit"
   echo ""
-  echo "Version 1.0"
+  echo "Version 1.1"
   echo "Author: Raymond Kiu Raymond.Kiu@quadram.ac.uk (2020)"
   echo "";
 }
-version () { echo "version 1.0";}
+version () { echo "version 1.1";}
 author () { echo "Author: Raymond Kiu Raymond.Kiu@quadram.ac.uk";}
 
 
@@ -50,13 +50,13 @@ if [ $# -lt 1 ]; then
   echo " -a print author and exit"
   echo " -v print version and exit"
   echo ""
-  echo "Version 1.0"
+  echo "Version 1.1"
   echo "Author: Raymond Kiu Raymond.Kiu@quadram.ac.uk (2020)"
   echo "";
 exit 1
 fi
 
-abricate --quiet --db toxinCP $1 |awk '{if($9>90 && $10>90)print $5}'|sort -u|grep -E -x 'plc|cpb|etx|iap|ibp|cpe|netB'|awk '{print}' ORS=''> $1-toxins
+abricate --quiet --db toxinCP $1 |awk '{if($10>90 && $11>90)print $6}'|sort -u|grep -E -x 'plc|cpb|etx|iap|ibp|cpe|netB'|awk '{print}' ORS=''> $1-toxins
 
 grep -E -x -c "plc" $1-toxins|awk '{if ($0==1) print "A"}'
 grep -E -x -c "cpbetxplc" $1-toxins|awk '{if ($0==1) print "B"}'

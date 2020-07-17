@@ -41,6 +41,11 @@ LIST=$1
 SNPDIST=$2
 
 awk -F "," 'NR==FNR { a[$1]=$0 ; next } $1 in a { print $0 }' $LIST $SNPDIST > $1-filtered 
-awk -F "," 'NR==FNR { a[$1]=$0 ; next } $2 in a { print $0 }' $LIST $1-filtered
+awk -F "," 'NR==FNR { a[$1]=$0 ; next } $2 in a { print $0 }' $LIST $1-filtered > $1-COUNT
 
-exit 0
+# Extract counts eliminating self comparison
+awk -F "," '{ if ($1!~$2) print $1","$2","$3}' $1-COUNT
+
+# Remove intermediary files
+rm $1-filtered
+rm $1-COUNT

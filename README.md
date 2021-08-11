@@ -1,5 +1,5 @@
 # informatics-tools
-Some small and simple scripts useful for various bioinformatics purposes. 
+Some small and simple programs useful for various bioinformatics purposes. 
 
 ## 1. extract-contigs.pl
 This convenient Perl script is able to extract contigs of FASTA files either by contig name or a list of contig names.

@@ -19,13 +19,11 @@ usage () {
 version () { echo "version 0.1";}
 author () { echo "Author: Raymond Kiu Raymond.Kiu@quadram.ac.uk";}
 
-output=($1-complement.fasta)
 
 
-while getopts ':o:hav' opt;
+while getopts ':hav' opt;
 do
   case $opt in
-    o) output=$OPTARG ;;
     h) usage; exit;;
     a) author; exit;;
     v) version; exit;;
@@ -46,7 +44,6 @@ if [ $# -lt 1 ]; then
   echo ""
   echo "Usage: $0 [options] FASTAFILE"
   echo "Option:"
-  echo " -o output filename (default: FASTAFILE-complement.fasta)"
   echo " -h print usage and exit"
   echo " -a print author and exit"
   echo " -v print version and exit"
@@ -57,7 +54,8 @@ if [ $# -lt 1 ]; then
 exit 1
 fi
 
-cat $1| while read L; do echo $L; read L; echo "$L"|tr "ATGC" "TACG"|tr "atgc" "tacg";done > $output
+cat $1|tr ACGTacgt TGCAtgca | rev
 
 #cat $complement > $output
 exit 1;
+

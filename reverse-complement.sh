@@ -7,7 +7,6 @@ usage () {
   echo ""
   echo "Usage: $0 [options] FASTAFILE"
   echo "Option:"
-  echo " -o output filename (default: FASTAFILE-complement.fasta)"
   echo " -h print usage and exit"
   echo " -a print author and exit"
   echo " -v print version and exit"

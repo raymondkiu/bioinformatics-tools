@@ -4,6 +4,7 @@
 usage () {
   echo ""
   echo "This bash script can generate complement nucleotides in FASTA files"
+  echo "Remember: all nucleotides must be in one line otherwise this script won't work"
   echo ""
   echo "Usage: $0 [options] FASTAFILE"
   echo "Option:"
@@ -53,8 +54,8 @@ if [ $# -lt 1 ]; then
 exit 1
 fi
 
-cat $1|tr ACGTacgt TGCAtgca | rev
+#cat $1|grep "^[ATGCatgc]" |tr ACGTacgt TGCAtgca | rev
+cat $1 | while read L; do echo $L; read L; echo "$L" | tr "ATGC" "TACG"|tr "atgc" "tacg"|rev ; done
 
 #cat $complement > $output
 exit 1;
-

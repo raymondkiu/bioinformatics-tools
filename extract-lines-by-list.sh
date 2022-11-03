@@ -3,7 +3,7 @@
 #print the options
 usage () {
   echo ""
-  echo "This bash script extracts lines [FILE] if supplied with a list of specific field pattern [LIST]"
+  echo "This bash script extracts lines [FILE] if supplied with a list of specific field pattern [LIST] that matches the first column of FILE"
   echo "csv format is needed"
   echo ""
   echo "For example,"

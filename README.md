@@ -134,3 +134,12 @@ So use > to save into new fasta file, e.g.
 ```
 $ rename_contigs.sh 123.fasta ABC > ABC.fna
 ```
+
+## 11. basename-one-liner.sh
+This bash script uses basename software to generate prefixes in one line
+For example if you have three fastq files in the same directory BA1_R1.fastq BA2_R1.fastq BA3_R1.fastq
+Using this one-liner command will generate (based on same pattern of suffixes, in this case _R1.fastq):
+```
+$ basename-one-liner.sh _R1.fastq
+BA1 BA2 BA3
+```

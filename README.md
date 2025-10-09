@@ -143,3 +143,18 @@ Using this one-liner command will generate (based on same pattern of suffixes, i
 $ basename-one-liner.sh _R1.fastq
 BA1 BA2 BA3
 ```
+## 12. rename_prefix.sh
+This bash script renames any files in any directory by adding prefix (not suffix).
+```
+This bash script renames files by adding a prefix
+
+Usage: /hpc-home/kiur/script/rename_prefix.sh [options] NEWPREFIX filenames
+
+e.g. /hpc-home/kiur/script/rename_prefix.sh ABC bin.*.fasta
+
+Options:
+ -h print usage and exit
+ -a print author and exit
+ -v print version and exit
+```
+You can use this to add prefix to multiple files using loop with no problem.

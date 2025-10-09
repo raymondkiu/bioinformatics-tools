@@ -148,9 +148,9 @@ This bash script renames any files in any directory by adding prefix (not suffix
 ```
 This bash script renames files by adding a prefix
 
-Usage: /hpc-home/kiur/script/rename_prefix.sh [options] NEWPREFIX filenames
+Usage: ./rename_prefix.sh [options] NEWPREFIX filenames
 
-e.g. /hpc-home/kiur/script/rename_prefix.sh ABC bin.*.fasta
+e.g. ./rename_prefix.sh ABC bin.*.fasta
 
 Options:
  -h print usage and exit

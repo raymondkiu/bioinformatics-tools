@@ -175,3 +175,4 @@ Options:
   -p        Prefix mode
   -s        Suffix mode
 ```
+You can use this script in loop with no problem, also it will apply recursively to sub-directories.

@@ -158,3 +158,20 @@ Options:
  -v print version and exit
 ```
 You can use this to add prefix to multiple files using loop with no problem.
+
+## 13. rename_files.sh
+This script add prefix to file names and replace suffix of files names.
+It has two modes, prefix mode and suffix mode, see the usage:
+```
+This script add prefix to the file names, also change suffixes of the file names, all in one program
+Usage:
+  Prefix mode: ./rename_files.sh -p PREFIX pattern1 [pattern2 ...]
+  Suffix mode: ./rename_files.sh -s OLD_EXT NEW_EXT [TARGET_DIR]
+
+Options:
+  -h        Show help
+  -v        Show version
+  -a        Show author
+  -p        Prefix mode
+  -s        Suffix mode
+```

@@ -25,6 +25,7 @@ suffix_mode=0
 while getopts ":hvap:s:" opt; do
   case $opt in
     h)
+      echo "This script add prefix to the file names, also change suffixes of the file names, all in one program"
       echo "Usage:"
       echo "  Prefix mode: $0 -p PREFIX pattern1 [pattern2 ...]"
       echo "  Suffix mode: $0 -s OLD_EXT NEW_EXT [TARGET_DIR]"
